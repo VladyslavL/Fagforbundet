@@ -19,16 +19,16 @@
     <meta property="og:site_name" content="WWF" />
     <meta property="og:title" content="{{ receiver.first_name }} – jeg håper du vil delta på RCNs Riksmøte 2020" />
     <meta property="og:description" content="{{ receiver.first_name }} – jeg håper du vil delta på RCNs Riksmøte 2020." />
-    <meta property="og:image"       content="{% static 'landingpages/wwf/images/rev-thumbnail.jpg' %}" />
+    <meta property="og:image"       content="{% static 'landingpages/fagforbundet/images/rev-thumbnail.jpg' %}" />
     <meta property="fb:app_id" content="123456789" />
-    <script type="text/javascript" src="{% static 'landingpages/wwf/js/jquery.js' %}"></script>
-    <script type="text/javascript" src="{% static 'landingpages/wwf/js/video.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'landingpages/wwf/js/lang/nb.js' %}"></script>
-    <script type="text/javascript" src="{% static 'landingpages/wwf/js/videojs-flash.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'landingpages/wwf/js/videojs-flashls-source-handler.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'landingpages/wwf/js/videojs-contrib-hls.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'landingpages/wwf/style/libs.css' %}"/>
-    <link rel="stylesheet" href="{% static 'landingpages/wwf/style/style.css' %}"/>
+    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/video.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/lang/nb.js' %}"></script>
+    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/videojs-flash.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/videojs-flashls-source-handler.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/videojs-contrib-hls.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'landingpages/fagforbundet/style/libs.css' %}"/>
+    <link rel="stylesheet" href="{% static 'landingpages/fagforbundet/style/style.css' %}"/>
 </head>
 <body>
 
@@ -37,9 +37,9 @@
     <header>
         <div class="container flex">
             <a class="logo"
-                href="https://www.wwf.no/"
+                href="https://www.fagforbundet.no"
                 title="Gå til WWF nettsiden">
-                <img src="{% static "landingpages/wwf/images/logo.png" %}"
+                <img src="{% static "landingpages/fagforbundet/images/logo.png" %}"
                       alt="logo" />
             </a>
             <a href="javascript:;" class="button scroll_down">Del film</a>
@@ -47,7 +47,7 @@
     </header>
 
     <div class="video_scene">
-        <video-js class="video-js" preload="none" playsinline controls poster="{% static 'landingpages/wwf/images/thumbnail.jpg' %}">
+        <video-js class="video-js" preload="none" playsinline controls poster="{% static 'landingpages/fagforbundet/images/thumbnail.jpg' %}" data-setup='{"customControlsOnMobile": true, "autoplay": true, "muted": true}'></video-js>>
             <source src="{{ phase.video_url }}" type="application/x-mpegURL">
             <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a web browser that
@@ -55,7 +55,7 @@
             </p>
         </video-js>
         <div class="video__play">
-            <img src="{% static "landingpages/wwf/images/play.svg" %}" alt="play">
+            <img src="{% static "landingpages/fagforbundet/images/play.svg" %}" alt="play">
             <span>Play Now</span>
         </div>
         <div class="video_desktop_layer rwd_hide">
@@ -63,16 +63,10 @@
                 <div class="video_desktop_layer__inner flex_start">
                     <div class="video_desktop_layer__left">
                         <div class="video__title">
-                            <h1><strong>Hei {{ receiver.first_name }}</strong></h1>
+                            <h1><strong>Takk for at du er medlem i Fagforbundet, {{ receiver.first_name }}.</strong></h1>
                         </div>
                         <div class="video__desc">
-                          <p>Takk for at du er «faddertype» og støtter vårt arbeid for verdens dyr og natur. Vi
-                              setter stor pris på din støtte, derfor har vi laget denne filmen spesielt til deg:
-                              link til film Del gjerne filmen på Facebook og hjelp oss å bli enda flere! <br> <br>
-
-                              mvh Karoline Andaur, <br>
-                              Konstituert genereralsekretær <br>
-                              WWF Verdens naturfond</p>
+                          <p>For oss er Fagforbundets 100-årige historie viktig å feire, men det er like mye en anledning til å se fremover. Med deg på laget, {{ receiver.first_name }}, fortsetter vi kampen mot økte forskjeller og for et rettferdig samfunn. Vi skal jobbe sammen for faste, hele stillinger, at alle skal ha en lønn å leve av og tak over hodet. Kort sagt – trygghet på jobben og trygghet i livet.</p>
                       </div>
                     </div>
                     <div class="video_desktop_layer__right flex">
@@ -85,7 +79,7 @@
                           rel="noopener"
                         >
                           <figure>
-                            <img src="{% static "landingpages/wwf/images/fcbk.svg" %}" alt="Facebook" />
+                            <img src="{% static "landingpages/fagforbundet/images/fcbk.svg" %}" alt="Facebook" />
                           </figure>
                           <span>Facebook</span>
                         </a>
@@ -98,23 +92,11 @@
                         >
                           <figure>
                             <img
-                              src="{% static "landingpages/wwf/images/messenger.svg" %}"
+                              src="{% static "landingpages/fagforbundet/images/messenger.svg" %}"
                               alt="Facebook messenger"
                             />
                           </figure>
                           <span>Messenger</span>
-                        </a>
-                        <a
-                          href="https://www.linkedin.com/shareArticle?mini=true&url={{ share_url|urlencode:'' }}"
-                          class="button is_ln"
-                          target="_blank"
-                          title="Del på LinkedIn"
-                          rel="noopener"
-                        >
-                          <figure>
-                            <img src="{% static "landingpages/wwf/images/lnkdn.svg" %}" alt="LinkedIn" />
-                          </figure>
-                          <span>LinkedIn</span>
                         </a>
                         <a
                           href=""
@@ -124,7 +106,7 @@
                           rel="noopener"
                         >
                           <figure>
-                            <img src="{% static "landingpages/wwf/images/email.svg" %}" alt="Send link med e-post" />
+                            <img src="{% static "landingpages/fagforbundet/images/email.svg" %}" alt="Send link med e-post" />
                           </figure>
                           <span>Send link med e-post</span>
                         </a>
@@ -133,7 +115,7 @@
                             title="Last ned filmen"
                             download>
                             <figure>
-                                <img src="{% static "landingpages/wwf/images/download.svg" %}"
+                                <img src="{% static "landingpages/fagforbundet/images/download.svg" %}"
                                       alt="download" />
                             </figure>
                             <span>Last ned filmen</span>
@@ -143,7 +125,7 @@
                 </div>
                 <div class="footer__info">
                     <div class="copyright">
-                        <small>© 2020 WWF. All rights reserved</small>
+                        <small>© 2020 Fagforbundet. All rights reserved</small>
                     </div>
                     <div class="powered_by">
                       <small>Powered by <a href="https://storm121.com" target="_blank" title="Storm 121 nettsiden">"Storm 121</a></small>
@@ -155,96 +137,15 @@
 
       <div
         class="video_scene__inner"
-        style="background-image: url({% static "landingpages/wwf/images/thumbnail.jpg" %})"
+        style="background-image: url({% static "landingpages/fagforbundet/images/thumbnail.jpg" %})"
       >
         <div class="video__info container">
             <div class="video__title">
-                <h1><strong>Hei {{ receiver.first_name }}</strong></h1>
+                <h1><strong>Takk for at du er medlem i Fagforbundet, {{ receiver.first_name }}.</strong></h1>
             </div>
             <div class="video__desc">
-              <p>Takk for at du er «faddertype» og støtter vårt arbeid for verdens dyr og natur. Vi setter stor
-                  pris på din støtte, derfor har vi laget denne filmen spesielt til deg: link til film Del gjerne
-                  filmen på Facebook og hjelp oss å bli enda flere! <br> <br>
-
-                  mvh Karoline Andaur, <br>
-                  Konstituert genereralsekretær <br>
-                  WWF Verdens naturfond</p>
+              <p>For oss er Fagforbundets 100-årige historie viktig å feire, men det er like mye en anledning til å se fremover. Med deg på laget, {{ receiver.first_name }}, fortsetter vi kampen mot økte forskjeller og for et rettferdig samfunn. Vi skal jobbe sammen for faste, hele stillinger, at alle skal ha en lønn å leve av og tak over hodet. Kort sagt – trygghet på jobben og trygghet i livet.</p>
             </div>
-            <footer class="rwd_hide">
-                <div class="flex__rwd">
-                    <div class="footer__buttons">
-                        <a
-                          href="https://www.facebook.com/sharer/sharer.php?u={{ share_url|urlencode:'' }}"
-                          class="button is_fb"
-                          target="_blank"
-                          title="Del på Facebook"
-                          rel="noopener"
-                        >
-                          <figure>
-                            <img src="{% static "landingpages/wwf/images/fcbk.svg" %}" alt="Facebook" />
-                          </figure>
-                          <span>Facebook</span>
-                        </a>
-                        <a
-                          href="fb-messenger://share/?link={{ share_url|urlencode:'' }}&app_id=123456789"
-                          class="button is_fb_msg"
-                          title="Del på Facebook Messenger"
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <figure>
-                            <img
-                              src="{% static "landingpages/wwf/images/messenger.svg" %}"
-                              alt="Facebook messenger"
-                            />
-                          </figure>
-                          <span>Messenger</span>
-                        </a>
-                        <a
-                          href="https://www.linkedin.com/shareArticle?mini=true&url={{ share_url|urlencode:'' }}"
-                          class="button is_ln"
-                          target="_blank"
-                          title="Del på LinkedIn"
-                          rel="noopener"
-                        >
-                          <figure>
-                            <img src="{% static "landingpages/wwf/images/lnkdn.svg" %}" alt="LinkedIn" />
-                          </figure>
-                          <span>LinkedIn</span>
-                        </a>
-                        <a
-                          href=""
-                          class="button is_email"
-                          target="_blank"
-                          title="Send link med e-post"
-                          rel="noopener"
-                        >
-                          <figure>
-                            <img src="{% static "landingpages/wwf/images/email.svg" %}" alt="Send link med e-post" />
-                          </figure>
-                          <span>Send link med e-post</span>
-                        </a>
-                        <a href="{{ download_url }}"
-                            class="button is_dw"
-                            title="Last ned filmen"
-                            download>
-                            <figure>
-                                <img src="{% static "landingpages/wwf/images/download.svg" %}"
-                                      alt="download" />
-                            </figure>
-                            <span>Last ned filmen</span>
-                        </a>
-                    </div>
-                    <div class="footer__info">
-                        <div class="copyright">
-                            <small>© 2020 WWF. all rights reserved</small>
-                        </div>
-                        <div class="powered_by">
-                            <small>Powered by <a href="#">Storm 121</a></small>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
     </div>
 
@@ -261,7 +162,7 @@
             rel="noopener"
           >
             <figure>
-              <img src="{% static "landingpages/wwf/images/fcbk.svg" %}" alt="Facebook" />
+              <img src="{% static "landingpages/fagforbundet/images/fcbk.svg" %}" alt="Facebook" />
             </figure>
             <span>Facebook</span>
           </a>
@@ -274,23 +175,11 @@
           >
             <figure>
               <img
-                src="{% static "landingpages/wwf/images/messenger.svg" %}"
+                src="{% static "landingpages/fagforbundet/images/messenger.svg" %}"
                 alt="Facebook messenger"
               />
             </figure>
             <span>Messenger</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/shareArticle?mini=true&url={{ share_url|urlencode:'' }}"
-            class="button is_ln"
-            target="_blank"
-            title="Del på LinkedIn"
-            rel="noopener"
-          >
-            <figure>
-              <img src="{% static "landingpages/wwf/images/lnkdn.svg" %}" alt="LinkedIn" />
-            </figure>
-            <span>LinkedIn</span>
           </a>
           <a
             href=""
@@ -300,7 +189,7 @@
             rel="noopener"
           >
             <figure>
-              <img src="{% static "landingpages/wwf/images/email.svg" %}" alt="Send link med e-post" />
+              <img src="{% static "landingpages/fagforbundet/images/email.svg" %}" alt="Send link med e-post" />
             </figure>
             <span>Send link med e-post</span>
           </a>
@@ -309,7 +198,7 @@
               title="Last ned filmen"
               download>
               <figure>
-                  <img src="{% static "landingpages/wwf/images/download.svg" %}"
+                  <img src="{% static "landingpages/fagforbundet/images/download.svg" %}"
                         alt="download" />
               </figure>
               <span>Last ned filmen</span>
@@ -317,7 +206,7 @@
         </div>
         <div class="footer__info">
             <div class="copyright">
-                <small>© 2020 WWF. all rights reserved</small>
+                <small>© 2020 Fagforbundet. all rights reserved</small>
             </div>
             <div class="powered_by">
                 <small>Powered by <a href="#">Storm 121</a></small>
@@ -326,7 +215,7 @@
     </div>
 </footer>
 
-<script type="text/javascript" src="{% static "landingpages/wwf/js/libs.js" %}"></script>
+<script type="text/javascript" src="{% static "landingpages/fagforbundet/js/libs.js" %}"></script>
 <script>
 	 $(document).ready(function () {
              $('a').click(function () {
