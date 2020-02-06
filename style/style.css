@@ -1963,7 +1963,8 @@ header .button.scroll_down:hover{
         -ms-flex-pack: justify;
         -webkit-justify-content: flex-end;
         justify-content: flex-end;
-        padding-bottom: 37px
+        padding-bottom: 37px;
+        width: 100%;
     }
 }
 
