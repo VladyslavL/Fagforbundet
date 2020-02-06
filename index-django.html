@@ -19,16 +19,16 @@
     <meta property="og:site_name" content="WWF" />
     <meta property="og:title" content="{{ receiver.first_name }} – jeg håper du vil delta på RCNs Riksmøte 2020" />
     <meta property="og:description" content="{{ receiver.first_name }} – jeg håper du vil delta på RCNs Riksmøte 2020." />
-    <meta property="og:image"       content="{% static 'landingpages/fagforbundet/images/rev-thumbnail.jpg' %}" />
+    <meta property="og:image"       content="{% static 'landingpages/coop/images/rev-thumbnail.jpg' %}" />
     <meta property="fb:app_id" content="123456789" />
-    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/jquery.js' %}"></script>
-    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/video.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/lang/nb.js' %}"></script>
-    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/videojs-flash.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/videojs-flashls-source-handler.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'landingpages/fagforbundet/js/videojs-contrib-hls.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'landingpages/fagforbundet/style/libs.css' %}"/>
-    <link rel="stylesheet" href="{% static 'landingpages/fagforbundet/style/style.css' %}"/>
+    <script type="text/javascript" src="{% static 'landingpages/coop/js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'landingpages/coop/js/video.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'landingpages/coop/js/lang/nb.js' %}"></script>
+    <script type="text/javascript" src="{% static 'landingpages/coop/js/videojs-flash.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'landingpages/coop/js/videojs-flashls-source-handler.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'landingpages/coop/js/videojs-contrib-hls.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'landingpages/coop/style/libs.css' %}"/>
+    <link rel="stylesheet" href="{% static 'landingpages/coop/style/style.css' %}"/>
 </head>
 <body>
 
@@ -37,9 +37,9 @@
     <header>
         <div class="container flex">
             <a class="logo"
-                href="https://www.fagforbundet.no"
-                title="Gå til WWF nettsiden">
-                <img src="{% static "landingpages/fagforbundet/images/logo.png" %}"
+                href="https://www.coop.no"
+                title="Gå til COOP nettsiden">
+                <img src="{% static "landingpages/coop/images/logo.png" %}"
                       alt="logo" />
             </a>
             <a href="javascript:;" class="button scroll_down">Del film</a>
@@ -47,85 +47,52 @@
     </header>
 
     <div class="video_scene">
-        <video-js class="video-js" preload="none" playsinline controls poster="{% static 'landingpages/fagforbundet/images/thumbnail.jpg' %}" data-setup='{"customControlsOnMobile": true, "autoplay": true, "muted": true}'></video-js>>
+        <video-js class="video-js" preload="none" playsinline controls poster="{% static 'landingpages/coop/images/thumbnail.jpg' %}" data-setup='{"customControlsOnMobile": true, "autoplay": true, "muted": true}'></video-js>>
             <source src="{{ phase.video_url }}" type="application/x-mpegURL">
             <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a web browser that
                 <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
             </p>
         </video-js>
-        <div class="video__play">
-            <img src="{% static "landingpages/fagforbundet/images/play.svg" %}" alt="play">
-            <span>Play Now</span>
-        </div>
         <div class="video_desktop_layer rwd_hide">
             <div class="container">
-                <div class="video_desktop_layer__inner flex_start">
-                    <div class="video_desktop_layer__left">
-                        <div class="video__title">
-                            <h1><strong>Takk for at du er medlem i Fagforbundet, {{ receiver.first_name }}.</strong></h1>
-                        </div>
-                        <div class="video__desc">
-                          <p>For oss er Fagforbundets 100-årige historie viktig å feire, men det er like mye en anledning til å se fremover. Med deg på laget, {{ receiver.first_name }}, fortsetter vi kampen mot økte forskjeller og for et rettferdig samfunn. Vi skal jobbe sammen for faste, hele stillinger, at alle skal ha en lønn å leve av og tak over hodet. Kort sagt – trygghet på jobben og trygghet i livet.</p>
-                      </div>
+                <div class="video_desktop_layer__inner">
+                  <div class="video_desktop_layer__right flex">
+                    <div class="footer__buttons">
+                        <a href="#" class="button is_email is_custom" target="_blank" rel="noopener">
+                            <span>beste praksis</span>
+                            <img src="images/external.svg" width="20px" height="20px" alt="icon for external links">
+                        </a>
+                        <a href="#" class="button is_email is_custom" target="_blank" rel="noopener">
+                            <span>ny rutine for varepåfylling</span>
+                            <img src="images/external.svg" width="20px" height="20px" alt="icon for external links">
+                        </a>
+                        <a href="#" class="button is_email is_custom" target="_blank" rel="noopener">
+                            <span>personalmøtepakken</span>
+                            <img src="images/external.svg" width="20px" height="20px" alt="icon for external links">
+                        </a>
                     </div>
-                    <div class="video_desktop_layer__right flex">
-                      <div class="footer__buttons">
-                        <a
-                          href="https://www.facebook.com/sharer/sharer.php?u={{ share_url|urlencode:'' }}"
-                          class="button is_fb"
-                          target="_blank"
-                          title="Del på Facebook"
-                          rel="noopener"
-                        >
-                          <figure>
-                            <img src="{% static "landingpages/fagforbundet/images/fcbk.svg" %}" alt="Facebook" />
-                          </figure>
-                          <span>Facebook</span>
-                        </a>
-                        <a
-                          href="fb-messenger://share/?link={{ share_url|urlencode:'' }}&app_id=123456789"
-                          class="button is_fb_msg"
-                          title="Del på Facebook Messenger"
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <figure>
-                            <img
-                              src="{% static "landingpages/fagforbundet/images/messenger.svg" %}"
-                              alt="Facebook messenger"
-                            />
-                          </figure>
-                          <span>Messenger</span>
-                        </a>
-                        <a
-                          href=""
-                          class="button is_email"
-                          target="_blank"
-                          title="Send link med e-post"
-                          rel="noopener"
-                        >
-                          <figure>
-                            <img src="{% static "landingpages/fagforbundet/images/email.svg" %}" alt="Send link med e-post" />
-                          </figure>
-                          <span>Send link med e-post</span>
-                        </a>
-                        <a href="{{ download_url }}"
-                            class="button is_dw"
-                            title="Last ned filmen"
-                            download>
-                            <figure>
-                                <img src="{% static "landingpages/fagforbundet/images/download.svg" %}"
-                                      alt="download" />
-                            </figure>
-                            <span>Last ned filmen</span>
-                        </a>
-                      </div>
+                </div>
+                <div class="video_desktop_layer__left">
+                    <h1 class="content__body-header">Hei Ann!</h1>
+
+                    <div class="content__body-columns">
+                        <p class="content__body-text">Varepåfylling er både tungt og tidkrevende. Nå er det masse nye beste praksis verktøy tilgjengelig på intranett, samt et e-kurs i læringsportalen.</p>
+                        <p class="content__body-text">Håper det kan være til hjelp!</p>
+                        <p class="content__body-text">Dersom ikke linken til intranett fungerer finner dere frem
+                            ved å:</p>
+                        <ul class="content__body-list">
+                            <li>Gå til butikk og salg på intranett</li>
+                            <li>Gå videre til Beste praksis og butikkrutiner</li>
+                            <li>Send innspill til <a href="mailto:smart@coop.no">smart@coop.no</a> dersom du forbedringsforslag</li>
+                        </ul>
+                        <p class="content__body-text">Målgruppen for rutiner er butikksjef, mens målgruppen for metodekort, sjekklister, mm. er øvrige ansatte som jobber med varepåfylling.</p>
                     </div>
+                </div>
                 </div>
                 <div class="footer__info">
                     <div class="copyright">
-                        <small>© 2020 Fagforbundet. All rights reserved</small>
+                        <small>© 2020 COOP. All rights reserved</small>
                     </div>
                     <div class="powered_by">
                       <small>Powered by <a href="https://storm121.com" target="_blank" title="Storm 121 nettsiden">"Storm 121</a></small>
@@ -137,16 +104,24 @@
 
       <div
         class="video_scene__inner"
-        style="background-image: url({% static "landingpages/fagforbundet/images/thumbnail.jpg" %})"
+        style="background-image: url({% static "landingpages/coop/images/thumbnail.jpg" %})"
       >
         <div class="video__info container">
-            <div class="video__title">
-                <h1><strong>Takk for at du er medlem i Fagforbundet, {{ receiver.first_name }}.</strong></h1>
-            </div>
-            <div class="video__desc">
-              <p>For oss er Fagforbundets 100-årige historie viktig å feire, men det er like mye en anledning til å se fremover. Med deg på laget, {{ receiver.first_name }}, fortsetter vi kampen mot økte forskjeller og for et rettferdig samfunn. Vi skal jobbe sammen for faste, hele stillinger, at alle skal ha en lønn å leve av og tak over hodet. Kort sagt – trygghet på jobben og trygghet i livet.</p>
-            </div>
-        </div>
+          <h1 class="content__body-header">Hei Ann!</h1>
+
+          <div class="content__body-columns">
+              <p class="content__body-text">Varepåfylling er både tungt og tidkrevende. Nå er det masse nye beste praksis verktøy tilgjengelig på intranett, samt et e-kurs i læringsportalen.</p>
+              <p class="content__body-text">Håper det kan være til hjelp!</p>
+              <p class="content__body-text">Dersom ikke linken til intranett fungerer finner dere frem
+                  ved å:</p>
+              <ul class="content__body-list">
+                  <li>Gå til butikk og salg på intranett</li>
+                  <li>Gå videre til Beste praksis og butikkrutiner</li>
+                  <li>Send innspill til <a href="mailto:smart@coop.no">smart@coop.no</a> dersom du forbedringsforslag</li>
+              </ul>
+              <p class="content__body-text">Målgruppen for rutiner er butikksjef, mens målgruppen for metodekort, sjekklister, mm. er øvrige ansatte som jobber med varepåfylling.</p>
+          </div>
+      </div>
     </div>
 
 </div>
@@ -154,59 +129,22 @@
 <footer class="rwd_show">
     <div class="container is_smaller flex__rwd">
         <div class="footer__buttons">
-          <a
-            href="https://www.facebook.com/sharer/sharer.php?u={{ share_url|urlencode:'' }}"
-            class="button is_fb"
-            target="_blank"
-            title="Del på Facebook"
-            rel="noopener"
-          >
-            <figure>
-              <img src="{% static "landingpages/fagforbundet/images/fcbk.svg" %}" alt="Facebook" />
-            </figure>
-            <span>Facebook</span>
+          <a href="#" class="button is_email is_custom" target="_blank" rel="noopener">
+            <span>beste praksis</span>
+            <img src="images/external.svg" width="20px" height="20px" alt="icon for external links">
           </a>
-          <a
-            href="fb-messenger://share/?link={{ share_url|urlencode:'' }}&app_id=123456789"
-            class="button is_fb_msg"
-            title="Del på Facebook Messenger"
-            target="_blank"
-            rel="noopener"
-          >
-            <figure>
-              <img
-                src="{% static "landingpages/fagforbundet/images/messenger.svg" %}"
-                alt="Facebook messenger"
-              />
-            </figure>
-            <span>Messenger</span>
+          <a href="#" class="button is_email is_custom" target="_blank" rel="noopener">
+              <span>ny rutine for varepåfylling</span>
+              <img src="images/external.svg" width="20px" height="20px" alt="icon for external links">
           </a>
-          <a
-            href=""
-            class="button is_email"
-            target="_blank"
-            title="Send link med e-post"
-            rel="noopener"
-          >
-            <figure>
-              <img src="{% static "landingpages/fagforbundet/images/email.svg" %}" alt="Send link med e-post" />
-            </figure>
-            <span>Send link med e-post</span>
-          </a>
-          <a href="{{ download_url }}"
-              class="button is_dw"
-              title="Last ned filmen"
-              download>
-              <figure>
-                  <img src="{% static "landingpages/fagforbundet/images/download.svg" %}"
-                        alt="download" />
-              </figure>
-              <span>Last ned filmen</span>
+          <a href="#" class="button is_email is_custom" target="_blank" rel="noopener">
+              <span>personalmøtepakken</span>
+              <img src="images/external.svg" width="20px" height="20px" alt="icon for external links">
           </a>
         </div>
         <div class="footer__info">
             <div class="copyright">
-                <small>© 2020 Fagforbundet. all rights reserved</small>
+                <small>© 2020 COOP. all rights reserved</small>
             </div>
             <div class="powered_by">
                 <small>Powered by <a href="#">Storm 121</a></small>
@@ -215,7 +153,7 @@
     </div>
 </footer>
 
-<script type="text/javascript" src="{% static "landingpages/fagforbundet/js/libs.js" %}"></script>
+<script type="text/javascript" src="{% static "landingpages/coop/js/libs.js" %}"></script>
 <script>
 	 $(document).ready(function () {
              $('a').click(function () {
