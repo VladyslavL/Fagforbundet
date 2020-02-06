@@ -1216,6 +1216,7 @@ div.wpcf7 .screen-reader-response {
 
 .button.is_custom span{
     display: block !important;
+    /* padding-left: 10px; */
 }
 
 .button.is_email {
@@ -2023,8 +2024,12 @@ header .button.scroll_down:hover{
 }
 
 @media screen and (max-width: 767px) and (min-width: 481px) {
+    .footer__buttons{
+        display: block;
+    }
     .footer__buttons .button+.button {
-        margin-left: 16px
+        margin-left: 16px;
+        margin-left: 0;
     }
 
     .footer__buttons .button figure {
@@ -2033,6 +2038,15 @@ header .button.scroll_down:hover{
 
     .footer__buttons .button span {
         /* display: none */
+    }
+
+    .button{
+        display: block;
+        text-align: center;
+    }
+
+    .button+.button{
+        margin-top: 20px;
     }
 }
 
