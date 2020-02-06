@@ -1216,7 +1216,7 @@ div.wpcf7 .screen-reader-response {
 
 .button.is_custom span{
     display: block !important;
-    /* padding-left: 10px; */
+    padding-right: 10px;
 }
 
 .button.is_email {
@@ -1286,7 +1286,7 @@ div.wpcf7 .screen-reader-response {
 }
 
 .button+.button {
-    /* margin-left: 10px */
+    margin-left: 10px
 }
 
 .button figure {
@@ -2002,7 +2002,9 @@ header .button.scroll_down:hover{
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         -webkit-justify-content: center;
-        justify-content: center
+        justify-content: center;
+        margin-top: 20px;
+        display: flex;
     }
 }
 
@@ -2019,7 +2021,7 @@ header .button.scroll_down:hover{
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
     .footer__buttons .button+.button {
-        margin-left: 20px
+        margin-left: 20px;
     }
 }
 
@@ -2279,7 +2281,6 @@ header .button.scroll_down:hover{
 .content__body-columns p + p,
 .content__body-columns ul + p,
 .content__body-columns p + a,
-.content__body-columns a + a,
 .content__body-columns a + p{
     margin-top: 40px;
 }
@@ -2319,12 +2320,6 @@ header .button.scroll_down:hover{
 .content__body-columns .button{
     background-color: #00234f;
     justify-content: center;
-    margin-top: 40px;
-    display: inline-flex;
-}
-
-.content__body-columns .button img{
-    margin-left: 10px;
 }
 
 @media screen and (min-width: 1280px) {
