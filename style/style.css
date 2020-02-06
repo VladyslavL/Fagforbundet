@@ -1286,7 +1286,7 @@ div.wpcf7 .screen-reader-response {
 }
 
 .button+.button {
-    margin-left: 10px
+    /* margin-left: 10px */
 }
 
 .button figure {
@@ -2046,7 +2046,7 @@ header .button.scroll_down:hover{
     }
 
     .button+.button{
-        margin-top: 20px;
+        /* margin-top: 20px; */
     }
 }
 
@@ -2279,6 +2279,7 @@ header .button.scroll_down:hover{
 .content__body-columns p + p,
 .content__body-columns ul + p,
 .content__body-columns p + a,
+.content__body-columns a + a,
 .content__body-columns a + p{
     margin-top: 40px;
 }
@@ -2318,6 +2319,12 @@ header .button.scroll_down:hover{
 .content__body-columns .button{
     background-color: #00234f;
     justify-content: center;
+    margin-top: 40px;
+    display: inline-flex;
+}
+
+.content__body-columns .button img{
+    margin-left: 10px;
 }
 
 @media screen and (min-width: 1280px) {
